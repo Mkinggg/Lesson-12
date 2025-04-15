@@ -1,0 +1,34 @@
+! SoftChalk LessonBuilder
+! ================ DO NOT EDIT ================
+
+act_item=5
+
+act_num=5
+act_type=3
+items=9
+showList=false
+showFlashCardTerm=true
+showFlashCardDef=false
+useFlashBigText=false
+hideActivityBackground=false
+instructions=Click and drag to highlight a found word from the list.
+minimumDuration=5
+seekawordHintOption=true
+wordPair[1]=Martyrdom
+wordPair[2]=Terrorism
+wordPair[3]=Phantomarmy
+wordPair[4]=Alienation
+wordPair[5]=Technology
+wordPair[6]=Karoshi
+wordPair[7]=Genocide
+wordPair[8]=Trauma
+wordPair[9]=Nuclearweapon
+inline=true
+points=8
+showRestart=true
+showTitle=true
+sqrsize=14
+adaDescription=
+hotspotWidth=450
+hotspotHeight=500
+iconPosition=1

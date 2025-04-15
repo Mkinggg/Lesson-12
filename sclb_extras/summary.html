@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="generator" content="SoftChalk Create 11.04.03" />
+<title>Score Summary</title>
+<script src="cert.js"></script>
+<script src="jquery.min.js"></script>
+<style type="text/css">
+div.content {
+position: relative;
+text-align: center;
+width: 1024px;
+height: 780px;
+font-family: "Palatino Linotype", serif;
+color: black;
+}
+.certificate {
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+width: 900px;
+}
+.title {
+font-size: 55px;
+font-weight: 600;
+color: #b37700;
+padding-bottom: 10px;
+}
+.std-padding {
+padding-top: 10px;
+padding-bottom: 10px;
+}
+.name-padding {
+padding-top: 10px;
+padding-bottom: 0;
+}
+.name-two-padding {
+padding-top: 0;
+padding-bottom: 10px;
+}
+.normal-text {
+font-size: 30px;
+font-weight: normal;
+}
+.emphasis-text {
+font-weight: 600;
+font-size: 35px;
+}
+</style>
+</head>
+<body>
+<div id='content' class='content'>
+<img src="summary-image.jpg"><div id='certificate' class='certificate'>
+<div id='summary-header' class='title'>Score Summary</div>
+<div id='content-name' class='emphasis-text name-padding'>Death and Dying</div>
+<div id='content-name-two' class='normal-text name-two-padding'>Risks, Perils and Traumatic Death</div>
+<div class='normal-text std-padding'>Completed: <span id='completed'></span></div>
+<div class='normal-text std-padding'>Name: <span id='username'></span></div>
+<div class='normal-text std-padding'>Points Possible: <span id='possible'></span></div>
+<div class='normal-text std-padding'>Points Attempted: <span id='attempted'></span></div>
+<div class='normal-text std-padding'>Points Correct: <span id='correct'></span></div>
+<div class='normal-text std-padding'>Correct: <span id='correct-percent'></span>% (Passing Score: <span id='passing'></span>%)</div>
+<div class='normal-text std-padding'>Time Spent: <span id='time-spent'></span></div>
+</div>
+</div>
+</body>
+</html>
+<script>
+qs = window.location.href.split('?')[1];
+params = parseQueryString(qs);
+$("#username").html(params.username);
+$("#completed").html(getDatetime(dateOnly=true));
+$("#possible").html(params.points);
+$("#attempted").html(params.attempted);
+$("#correct").html(params.correct);
+$("#correct-percent").html(params.score);
+$("#passing").html(params.passing_score);
+$("#time-spent").html(params.timespent);
+</script>
